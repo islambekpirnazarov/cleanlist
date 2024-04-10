@@ -1,0 +1,69 @@
+@use "./variables" as var;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Jost', sans-serif;
+    background-color: var.$dark;
+    color: var.$text-color;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+.container{
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    padding: 7px 18px;
+    border-radius: 5px;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    color: var.$text-color;
+    transition: 0.5s ease-in-out;
+    &:active{
+        transform: scale(1.3);
+    }
+}
+.btn-solid{
+    background-color: var.$primary;
+    &:hover{
+        background-color: #19443e;
+    }
+}
+.btn-outline{
+    background-color: transparent;
+    border: 2px solid var.$text-color;
+    padding: 5px 18px;
+    &:hover{
+        background-color: #111;
+    }
+}
+.section-title__span{
+    background-color: var.$primary;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 17px;
+}
+.section-title{
+    font-size: 35px;
+    font-weight: 700;
+}

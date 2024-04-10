@@ -1,0 +1,80 @@
+@use "../components/mixin" as mixin;
+@use "../components/variables" as var;
+
+.price{
+    padding: 50px 0;
+    text-align: center;
+    &-info{
+        width: 60%;
+        margin: 0 auto;
+    }
+    &-wrapper{
+        @include mixin.d-flex;
+        justify-content: center;
+        margin-top: 50px;
+        &__card{
+            background-color: #99999912;
+            border-radius: 24px;
+            padding: 64px 48px;
+            text-align: left;
+            &__info{
+                font-size: 15px;
+                color: gray;
+            }
+            hr{
+                margin: 15px 0;
+            }
+            &__number{
+                font-size: 30px;
+                font-weight: 700;
+            }
+            &__flex{
+                @include mixin.d-flex;
+                gap: 10px;
+                margin: 10px 0;
+                &__icon{
+                    color: var.$primary;
+                    font-size: 20px;
+                }
+            }
+            .btn{
+                margin-top: 20px;
+            }
+
+        }
+        &__card.active{
+            background-color: var.$primary;
+            transform: scale(1.1);
+            border-radius: 24px;
+            border: 1px solid #fff;
+            .price-wrapper__card__title{
+                position: relative;
+            }
+            .price-wrapper__card__title::after{
+                display: inline-block;
+                position: absolute;
+                content: "MOST POPULAR";
+                font-size: 9px;
+                padding: 4px 7px;
+                border-radius: 4px;
+                background-color: #000;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 75px;
+            }
+            .price-wrapper__card__info{
+                color: #fff;
+            }
+            .price-wrapper__card__flex{
+                &__icon{
+                    color: #fff;
+                }
+            }
+            .btn.btn-outline{
+                &:hover{
+                    background-color: #1e5048;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@use "../components/mixin" as mixin;
+@use "../components/variables" as var;
+.header{
+    padding: 25px 0;
+    .header-content{
+        @include mixin.d-flex;
+        gap: 25px;
+        .header-logo{
+            @include mixin.d-flex;
+            gap: 5px;
+            &__text{
+                font-size: 28px;
+                font-weight: 600
+            }
+        }
+        .header-navigation{
+            @include mixin.d-flex;
+            gap: 25px;
+            .navigation ul{
+                @include mixin.d-flex;
+                gap: 30px;
+                .navigation-item__link{
+                    color: var.$text-color;
+                    transition: .5s ease-in-out;
+                    &:hover{
+                        color: var.$primary;
+                    }
+                }
+            }
+            .header-buttons{
+                @include mixin.d-flex;
+                gap: 15px;
+                i{
+                    display: none;
+                }
+            }
+        }
+    }
+}

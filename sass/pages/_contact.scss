@@ -1,0 +1,34 @@
+@use "../components/mixin" as mixin;
+@use "../components/variables" as var;
+
+.contact{
+    padding: 50px 0;
+    &-content{
+        @include mixin.d-flex;
+        background-color: var.$primary;
+        border-radius: 8px;
+        &__left{
+            background-color: var.$primary;
+            flex: 1.5;
+            padding: 50px;
+            border-radius: 8px 0 0 8px;
+            &__span{
+                position: absolute;
+                display: inline-block;
+                width: 50px;
+                height: 2px;
+                background-color: #fff;
+            }
+            &__title{
+                font-size: 30px;
+            }
+        }
+        &__right{
+            flex: 1;
+            text-align: right;
+            background-color: #2C524D;
+            padding: 50px;
+            border-radius: 100px 8px 8px 0;
+        }
+    }
+}

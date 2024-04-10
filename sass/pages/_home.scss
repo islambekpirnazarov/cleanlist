@@ -1,0 +1,35 @@
+@use "../components/mixin";
+@use "../components/variables" as var;
+
+.home{
+    padding: 50px 0;
+    &-content{
+        @include mixin.d-flex;
+        gap: 35px;
+        &__left{
+            flex: 1;
+            &__title{
+                margin-top: 15px;
+                font-size: 50px;
+                font-weight: 700;
+                line-height: 64px;
+                span{
+                    transform: translateY(-12px);
+                    display: inline-block;
+                    background-color: var.$primary;
+                    width: 35px;
+                    height: 8px;
+                }
+            }
+            &__info{
+                line-height: 32px;
+                font-size: 20px;
+                font-weight: 400;
+                margin: 20px 0; 
+            }
+        }
+        &__right{
+            flex: 1;
+        }
+    }
+}

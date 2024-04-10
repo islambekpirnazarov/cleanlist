@@ -1,0 +1,83 @@
+@use "../components/mixin" as mixin;
+@use "../components/variables" as var;
+
+.footer{
+    padding: 50px 0 20px 0px;
+    &-nav{
+        @include mixin.d-flex;
+        &__ul{
+            @include mixin.d-flex;
+            gap: 30px;
+            margin: 20px 0;
+            &__li{
+                cursor: pointer;
+                transition: 0.6s ease-in-out;
+                &:hover{
+                    color: var.$primary;
+                }
+            }
+        }
+    }
+    &-content{
+        @include mixin.d-flex;
+        margin: 20px 0;
+
+        &__item{
+            text-align: center;
+            flex: 1;
+            &__logo{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                &__img{
+                    width: 40px;
+                }
+                &__text{
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+            }
+            &__text{
+                font-size: 14px;
+                margin-top: 15px;
+            }
+            &__title{
+                color: var.$primary;
+                font-weight: 700;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            &__flex{
+                @include mixin.d-flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            &__social{
+                text-align: left;
+               &__icon{
+                    @include mixin.d-flex;
+                    justify-content: center;
+                    gap: 10px;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                    transition: .6s ease-in-out;
+                    &:hover{
+                        color: var.$primary;
+                        i{
+                            background-color: #fff;
+                        }
+                    }
+                    i{
+                        background-color: var.$primary;
+                        padding: 5px;
+                        border-radius: 50%;
+                    }
+               }
+            }
+        }
+    }
+    &-bottom{
+        text-align: center;
+        margin-top: 15px;
+    }
+}

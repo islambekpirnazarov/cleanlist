@@ -1,0 +1,175 @@
+@use "../components/variables" as var;
+
+@media screen and (max-width: 1092px){
+    .home{
+        &-content{
+            &__left{
+                flex: 1.5;
+                &__title{
+                    margin-top: 10px;
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+                &__info{
+                    margin: 10px 0;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px){
+    .header{
+        .header-content{
+            .header-navigation{
+                .navigation{
+                    display: none;
+                }
+                .header-buttons {
+                    i{
+                        display: block;
+                        color: var.$primary;
+                        font-size: 30px;
+                        cursor: pointer;
+                        transition: all .5s ease-in-out;
+                        &:hover{
+                            color: var.$text-color;
+                        }
+                    }
+                }
+            }
+            
+        }       
+    }
+        
+    .footer{
+        &-nav{
+            flex-direction: column;
+        }
+    }
+    .features{
+        &-content{
+            flex-direction: column;
+        }
+    }
+    .price{
+        &-wrapper{
+            &__card{
+                padding: 30px;
+                &__number{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .section-title{
+        font-size: 30px;
+    }
+    .container{
+        width: 93%;
+    }
+    .home{
+        &-content{
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    .price{
+        &-wrapper{
+            padding: 10px;
+            &__card{
+                padding: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .contact{
+        &-content{
+            flex-direction: column;
+            &__right{
+                background-color: var.$primary;
+                padding-top: 0;
+            }
+        }
+    }
+    .footer{
+        &-nav{
+            gap: 15px;
+        }
+        &-content{
+            flex-direction: column;
+            gap: 20px;
+            &__item{
+                &__logo{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .container{
+        width: 90%;
+    }
+    .home, .about, .features, .price, .contact, .footer{
+        padding: 25px;
+    }
+    .header{
+        .header-content{
+            .header-navigation{
+                .header-buttons{
+                    .btn{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .home{
+        &-content{
+            &__left{
+                &__title{
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+    .about{
+        &-img{
+            flex-direction: column;
+        }
+    }
+    .features{
+        &-content{
+            &__right{
+                &__cards{
+                    grid-template-columns: auto;
+                }
+            }
+        }
+    }
+    .price{
+        &-info{
+            width: 90%;
+        }
+        &-wrapper{
+            flex-direction: column;
+            &__card{
+                padding: 30px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .footer{
+        &-nav{
+            &__ul{
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

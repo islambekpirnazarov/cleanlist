@@ -1,0 +1,27 @@
+@import "./sass/components/global";
+@import "./sass/pages/header";
+@import "./sass/pages/home";
+@import "./sass/pages/about";
+@import "./sass/pages/features";
+@import "./sass/pages/price";
+@import "./sass/pages/contact";
+@import "./sass/pages/footer";
+@import "./sass/pages/media";
+.main-bg{
+    background-image: url(./img/BG\ Pattern.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 100vh;
+}
+.features{
+    background-image: url(./img/BG\ Pattern\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 30%;
+}
+@media screen and (max-width: 800px) {
+    .features{
+        background-size: 70%;
+        background-position: center;
+    }
+}
